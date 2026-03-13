@@ -1,0 +1,28 @@
+{
+  "name": "mcp-api-builder",
+  "version": "0.1.0",
+  "description": "Template for building MCP servers that wrap REST APIs. Includes a working Open-Meteo weather example.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "mcp-api-builder": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "gen": "tsx scripts/openapi-to-mcp.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
